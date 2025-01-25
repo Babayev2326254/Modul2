@@ -52,8 +52,9 @@ public class Example {
     };
 
     public static void main(String[] args) {
-        executeProgramLogic.run(); // Execute the logic inside Runnable
+        executeProgramLogic.run();
     }
+
 
 
 }
