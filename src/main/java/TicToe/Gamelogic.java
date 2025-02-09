@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Gamelogic extends XandO {
     int[] numbers = new int[9];
     int k;
+
     private static String[][] array = {
             {"-", "-", "-"},
             {"-", "-", "-"},
@@ -27,6 +28,7 @@ public class Gamelogic extends XandO {
         Gamelogic.array = array;
     }
 
+
     public static void gamedefault() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -47,7 +49,7 @@ public class Gamelogic extends XandO {
                     Gamelogic.gamedefault();
                     break;
                 } else {
-                    System.out.println("Yeniden");
+                    System.out.println("Again ");
                     switchX();
                 }
             case 2:

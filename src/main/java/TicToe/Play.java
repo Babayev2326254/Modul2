@@ -1,14 +1,10 @@
 package TicToe;
 
 
-import java.util.Scanner;
-
 public class Play {
     public static void main(String[] args) {
         System.out.println("\n Welcome turing Tic Tao game ");
         XandO xandO = new XandO();
-        Gamelogic gamelogic = new Gamelogic();
-        String[][] arrays = Gamelogic.getArray();
 
         String secim = xandO.choose();
         if (secim.equals("X")) {
@@ -22,13 +18,19 @@ public class Play {
         Gamelogic.gamedefault();
 
         for (int i = 0; i < 4; i++) {
-            System.out.println(" Hədəfi secin");
-            Scanner scanner = new Scanner(System.in);
-            Gamelogic.switchX();
-            Gamelogic.switchY();
-        }
-        Gamelogic.switchX();
+            if (secim.equals("X")) {
+                System.out.println(" Hədəfi secin");
+                Gamelogic.switchX();
+                System.out.println(" Hədəfi secin");
+                Gamelogic.switchY();
+            } else {
+                System.out.println(" Hədəfi secin");
+                Gamelogic.switchY();
+                System.out.println(" Hədəfi secin");
+                Gamelogic.switchX();
+            }
 
+        }
 
         System.out.println("Game final");
         Gamelogic.gamedefault();
