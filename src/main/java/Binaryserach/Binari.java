@@ -13,15 +13,17 @@ public class Binari {
             System.out.println("index nomresi  " + l);
         } else if (arr[l] < serach) {
             left = l + 1;
-            binary(arr, serach, l + 1, right);
-        } else if (arr[l] < serach) {
+            binary(arr, serach, left, right);
+        } else if (arr[l] > serach) {
             right = l - 1;
-            binary(arr, serach, left, l - 1);
+            binary(arr, serach, left, right);
         }
     }
 
+
     public static void main(String[] args) {
-        int[] arr = {2, 4, 6, 8, 10, 15};
+
+        int[] arr = {2, 4, 6, 20, 10, 15};
         binary(arr, 10, 0, arr.length - 1);
     }
 
